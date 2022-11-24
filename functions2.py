@@ -39,7 +39,7 @@ def Kosarbarakas():
     print('A termékék listája:\n ')
     sorsszam=1
     for key, value in termekek.items():
-       print(f'{sorszam} - {key} - {value}Ft')
+       print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
     valasztas=int(input('Melyik terméket szeretné a kosárba helyezni (A sorszámát írja be)'))
     
