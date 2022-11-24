@@ -10,7 +10,7 @@ while choice !="0":
     if choice=='1':
         Termekekkiirasa()
     elif choice=='2':
-        pass
+        Kosarbarakas()
     elif choice=='3':
         pass
     elif choice=='4':

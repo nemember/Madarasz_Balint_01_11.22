@@ -1,7 +1,8 @@
 from os import system
-from meh import termekek
+from meh import *
 
 filename='Termékek.csv'
+kosar='Kosár.csv'
 
 def menu():
     system('cls')
@@ -36,9 +37,11 @@ def Termekekkiirasa():
 def Kosarbarakas():
     system('cls')
     print('A termékék listája:\n ')
+    sorsszam=1
     for key, value in termekek.items():
-       print(f'{key} - {value}Ft')
-    valasztas=input('Melyik terméket szeretné a kosárba helyezni (A sorszámát írja be)')
+       print(f'{sorszam} - {key} - {value}Ft')
+       sorsszam+=1
+    valasztas=int(input('Melyik terméket szeretné a kosárba helyezni (A sorszámát írja be)'))
     
     
 
