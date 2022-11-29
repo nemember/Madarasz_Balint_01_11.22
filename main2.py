@@ -12,7 +12,7 @@ while choice !="0":
     elif choice=='2':
         Kosarbarakas()
     elif choice=='3':
-        pass
+        Kosar()
     elif choice=='4':
         pass
     elif choice=='4':

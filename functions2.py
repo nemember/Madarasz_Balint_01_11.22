@@ -1,8 +1,8 @@
 from os import system
-from meh import *
+from meh import kosar , termekek
 
 filename='Termékek.csv'
-kosar='Kosár.csv'
+
 
 def menu():
     system('cls')
@@ -42,8 +42,23 @@ def Kosarbarakas():
        print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
     valasztas=int(input('Melyik terméket szeretné a kosárba helyezni (A sorszámát írja be)'))
+    termekek_neve = list(termekek.keys())
+    termekek_ara = list(termekek.values())
+    kosar[termekek_neve[valasztas-1]] = termekek_ara[valasztas-1]
     
-    
+
+
+
+
+
+def Kosar():
+    system('cls')
+    print('A kosárban lévő termékek:\n ')
+    sorsszam=1
+    for item in kosar:
+       print(f'{sorsszam}. {item}')
+       sorsszam+=1
+    input('Tovább (Enter)')
 
   
 
