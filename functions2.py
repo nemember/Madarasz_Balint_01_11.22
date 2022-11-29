@@ -65,9 +65,14 @@ def Kosarbol_Torles():
     for key, value in kosar.items():
        print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
+    print(f'\nAz összes törléséhez írja be: {sorsszam} ')
     torlendo=int(input('Melyik terméket szeretné törölni a kosárból ? (A sorszámát írja be!)'))
     termekek_neve2 = list(kosar.keys())
     termekek_ara2 = list(kosar.values())
-    kosar.pop(termekek_neve2[-1])
+    if torlendo <= sorsszam - 1:
+        kosar.pop(termekek_neve2[-1])
+    else:
+        kosar.clear()
+
     input('Termék sikeresen törölve a kosárból')
  
