@@ -41,7 +41,7 @@ def Kosarbarakas():
     for key, value in termekek.items():
        print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
-    valasztas=int(input(f'\nMelyik terméket szeretné a kosárba helyezni (A sorszámát írja be!):' ))
+    valasztas=int(input(f'\nMelyik terméket szeretné a kosárba helyezni (A sorszámát írja be!): '))
     termekek_neve = list(termekek.keys())
     termekek_ara = list(termekek.values())
     kosar[termekek_neve[valasztas-1]] = termekek_ara[valasztas-1]
@@ -51,10 +51,13 @@ def Kosarbarakas():
 def Kosar():
     system('cls')
     print('A kosárban lévő termékek:\n ')
+    osszertek = 0
     sorsszam=1
     for key, value in kosar.items():
        print(f'{sorsszam} - {key} - {value}Ft')
+       osszertek+=value 
        sorsszam+=1
+    print(f'\nA termékek összértéke: {osszertek}Ft')
     input('Tovább (Enter)')
 
 
