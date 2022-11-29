@@ -41,16 +41,12 @@ def Kosarbarakas():
     for key, value in termekek.items():
        print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
-    valasztas=int(input('Melyik terméket szeretné a kosárba helyezni (A sorszámát írja be)'))
+    valasztas=int(input(f'\nMelyik terméket szeretné a kosárba helyezni (A sorszámát írja be!):' ))
     termekek_neve = list(termekek.keys())
     termekek_ara = list(termekek.values())
     kosar[termekek_neve[valasztas-1]] = termekek_ara[valasztas-1]
     input('Termék sikeresen kosárba rakva :)')
     
-
-
-
-
 
 def Kosar():
     system('cls')
@@ -61,6 +57,17 @@ def Kosar():
        sorsszam+=1
     input('Tovább (Enter)')
 
-  
 
+def Kosarbol_Torles():
+    system('cls')
+    print('A kosárban lévő termékek:\n ')
+    sorsszam=1
+    for key, value in kosar.items():
+       print(f'{sorsszam} - {key} - {value}Ft')
+       sorsszam+=1
+    torlendo=int(input('Melyik terméket szeretné törölni a kosárból ? (A sorszámát írja be!)'))
+    termekek_neve2 = list(kosar.keys())
+    termekek_ara2 = list(kosar.values())
+    kosar.pop(termekek_neve2[-1])
+    input('Termék sikeresen törölve a kosárból')
  
