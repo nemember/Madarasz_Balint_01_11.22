@@ -62,20 +62,36 @@ def Kosar():
 
 
 def Kosarbol_Torles():
+    termekek_neve2 = list(kosar.keys())
+    termekek_ara2 = list(kosar.values())
     system('cls')
     print('A kosárban lévő termékek:\n ')
     sorsszam=1
     for key, value in kosar.items():
        print(f'{sorsszam} - {key} - {value}Ft')
        sorsszam+=1
-    print(f'\nAz összes törléséhez írja be: {sorsszam} ')
-    torlendo=int(input('Melyik terméket szeretné törölni a kosárból ? (A sorszámát írja be!)'))
-    termekek_neve2 = list(kosar.keys())
-    termekek_ara2 = list(kosar.values())
-    if torlendo <= sorsszam - 1:
-        kosar.pop(termekek_neve2[-1])
+    if len(termekek_neve2)==0:
+        print('Nincs semmi a kosárban.')
+        print(f'Ha vissza szeretne térni a menühöz nyomja meg a: {sorsszam+1}')
     else:
-        kosar.clear()
+        print(f'\nAz összes törléséhez írja be: {sorsszam} ')
+        print(f'HA nem szeretne semmit kitörölni nyomja meg a: {sorsszam+1}')
+    
+    torlendo=int(input(f'\nMelyik terméket szeretné törölni a kosárból ? (A sorszámát írja be!): '))
+    
+    
+    
+    if torlendo <= sorsszam - 1:
+        kosar.pop(termekek_neve2[torlendo-1])
+        input(f'A/Az "{termekek_neve2[torlendo-1]}" sikeresen törölve a kosárból')
+    else:
+        if torlendo==sorsszam:
+            kosar.clear()
+            input(f"Az összes termék törölve lett a kosárból. ")
+        else:
+            pass
+       
+    
 
-    input('Termék sikeresen törölve a kosárból')
+    
  
