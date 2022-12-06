@@ -75,7 +75,7 @@ def Kosarbol_Torles():
         print(f'Ha vissza szeretne térni a menühöz nyomja meg a: {sorsszam+1}')
     else:
         print(f'\nAz összes törléséhez írja be: {sorsszam} ')
-        print(f'HA nem szeretne semmit kitörölni nyomja meg a: {sorsszam+1}')
+        print(f'Ha nem szeretne semmit kitörölni nyomja meg a: {sorsszam+1}')
     
     torlendo=int(input(f'\nMelyik terméket szeretné törölni a kosárból ? (A sorszámát írja be!): '))
     
